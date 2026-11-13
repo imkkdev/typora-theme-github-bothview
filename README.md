@@ -35,6 +35,17 @@ GitHub 风格的 Typora 主题，支持 **BothView**：侧边栏图钉固定后�
 | 大纲模式下右侧文件树被清空 | `#file-library div { display: none }` 把树全部隐藏，与 `display: block !important` 的本意矛盾 | 移除该规则 |
 | 普通模式 header 异常 | `header { z-index: -1 }` 全局生效 | 限定为 `.pin-outline header` |
 
+## 性能优化（大文件夹 / 卡顿）
+
+| 隐患 | 场景 | 优化 |
+|:---|:---|:---|
+| `@include-when-export` 远程字体 | 导出 PDF/HTML 时拉取 fonts.loli.net，网络不佳会卡住导出 | 移除远程引用，导出回退系统字体 |
+| `page-break-inside: avoid` | 超过一页高的代码块让 WebKit 分页器反复回溯，PDF 导出挂死 | 代码块允许跨页 |
+| 双栏面板 `position: fixed` | core 部分状态给侧边栏加 `contain: strict`，fixed 包含块漂移 + 全窗口合成层 | 改为 `absolute`，几何以侧边栏为锚 |
+| 文件树 `display: table` | 数千节点的自动表格布局开销极大 | 双栏模式改用 `block` 布局 |
+| 悬停切换 `overflow-x` | core 在侧边栏悬停时切换 `auto/hidden`，每次悬停触发整树重排 | 双栏模式固定为 `auto` |
+| 全量节点布局绘制 | 视口外的节点白白排版 | `.file-library-node` / `.file-list-item` 加 `content-visibility: auto`（WKWebView/Safari 18+ 生效，旧版本自动忽略） |
+
 以上修复均通过无头 Chrome 加载 Typora 官方 `window.css` + 本主题 CSS，对 normal / pin+files / pin+outline 三种状态做了布局断言（面板 x 坐标、宽度、可见性）验证。
 
 ## 致谢

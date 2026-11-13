@@ -530,3 +530,33 @@ footer {
   height: 100%;
 }
 /*=======================================================================*/
+
+/*=======================================================================
+  PERF：大文件夹优化
+=======================================================================*/
+
+/* 视口外的文件节点跳过布局与绘制（WKWebView/Safari 18+，旧版本自动忽略此属性） */
+.file-library-node,
+#file-library-list .file-list-item {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 26px;
+}
+
+#file-library-list .file-list-item {
+  contain-intrinsic-size: auto 60px;
+}
+
+/* 双栏模式下文件树改用 block 布局：core 的 display:table 自动布局在数千节点时
+   开销极大，且宽度变化（如悬停切换 overflow）会触发整树重排 */
+.typora-node.pin-outline #file-library-tree {
+  display: block;
+}
+
+/* 双栏模式下文件面板保持横向滚动可用，避免悬停时 overflow 在 auto/hidden 间
+   切换（core 规则）导致全树重排 */
+.typora-node.pin-outline #typora-sidebar:hover #file-library,
+.typora-node.pin-outline #file-library {
+  overflow-x: auto;
+  padding-bottom: 0;
+}
+/*=======================================================================*/
