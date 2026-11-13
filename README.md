@@ -17,9 +17,30 @@ GitHub 风格的 Typora 主题，支持 **BothView**：侧边栏图钉固定后�
 
 ## 安装
 
-1. 打开 Typora → 偏好设置 → 外观 → 打开主题文件夹
-2. 把 `github-bothview.css` 和 `github-bothview/` 文件夹一起拷进去
-3. 重启 Typora → 菜单「主题」→ 选择 **Github Bothview**
+方式一：一键命令（克隆后自动拷入主题目录）
+
+```bash
+# macOS
+git clone https://github.com/imkkdev/typora-theme-github-bothview.git /tmp/ttgb \
+  && cp -R /tmp/ttgb/github-bothview.css /tmp/ttgb/github-bothview \
+  ~/Library/Application\ Support/abnerworks.Typora/themes/ && rm -rf /tmp/ttgb
+```
+
+```powershell
+# Windows (PowerShell)
+git clone https://github.com/imkkdev/typora-theme-github-bothview.git $env:TEMP\ttgb
+Copy-Item $env:TEMP\ttgb\github-bothview.css,$env:TEMP\ttgb\github-bothview "$env:APPDATA\Typora\themes" -Recurse -Force
+Remove-Item $env:TEMP\ttgb -Recurse -Force
+```
+
+> 本主题在 macOS（WKWebView 内核）上实测；Windows 版 Typora 为 Chromium 内核，双栏布局未实测，欢迎反馈问题。
+
+方式二：手动安装
+
+1. 下载本仓库（Code → Download ZIP），或到 [Releases](https://github.com/imkkdev/typora-theme-github-bothview/releases) 下载主题包
+2. 打开 Typora → 偏好设置 → 外观 → 打开主题文件夹
+3. 把 `github-bothview.css` 和 `github-bothview/` 文件夹一起拷进去
+4. 重启 Typora → 菜单「主题」→ 选择 **Github Bothview**
 
 ## 使用 BothView
 
