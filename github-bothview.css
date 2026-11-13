@@ -3,7 +3,8 @@
   --control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+/* 不使用 @include-when-export 远程字体：导出时拉取外部样式表在网络不佳时会卡住导出流程，
+   字体已随主题本地分发（github-bothview/*.woff2），导出回退系统字体 */
 
 /* open-sans-regular - latin-ext_latin */
 @font-face {
@@ -301,8 +302,11 @@ code {
     font-size: 13px;
   }
   pre {
-    page-break-inside: avoid;
     word-wrap: break-word;
+  }
+  /* 高于一页的代码块配合 avoid 会让 WebKit 分页器长时间回溯（导出卡死），代码块允许分页 */
+  .md-fences {
+    page-break-inside: auto;
   }
 }
 
@@ -494,7 +498,7 @@ footer {
 }
 
 .pin-outline .active-tab-files #outline-content {
-  position: fixed;
+  position: absolute; /* 不用 fixed：core 部分状态给侧边栏加 contain:strict，fixed 包含块会漂移 */
   width: var(--sidebar-width);
   min-width: 0%;
   right: 0;
@@ -518,7 +522,7 @@ footer {
 
 .pin-outline .active-tab-outline #file-library {
   background-color: var(--bg-color);
-  position: fixed;
+  position: absolute; /* 同上，避免 contain:strict 下 fixed 包含块漂移 */
   top: 0;
   width: var(--sidebar-width);
   left: calc(100% - var(--sidebar-width));
