@@ -11,49 +11,64 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
-  src: local("Open Sans Regular"), local("OpenSans-Regular"),
-    url("./github-bothview/open-sans-v17-latin-ext_latin-regular.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src:
+    local("Open Sans Regular"),
+    local("OpenSans-Regular"),
+    url("./github-bothview/open-sans-v17-latin-ext_latin-regular.woff2")
+      format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* open-sans-italic - latin-ext_latin */
 @font-face {
   font-family: "Open Sans";
   font-style: italic;
   font-weight: normal;
-  src: local("Open Sans Italic"), local("OpenSans-Italic"),
-    url("./github-bothview/open-sans-v17-latin-ext_latin-italic.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src:
+    local("Open Sans Italic"),
+    local("OpenSans-Italic"),
+    url("./github-bothview/open-sans-v17-latin-ext_latin-italic.woff2")
+      format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* open-sans-700 - latin-ext_latin */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
-  src: local("Open Sans Bold"), local("OpenSans-Bold"),
-    url("./github-bothview/open-sans-v17-latin-ext_latin-700.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src:
+    local("Open Sans Bold"),
+    local("OpenSans-Bold"),
+    url("./github-bothview/open-sans-v17-latin-ext_latin-700.woff2")
+      format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* open-sans-700italic - latin-ext_latin */
 @font-face {
   font-family: "Open Sans";
   font-style: italic;
   font-weight: bold;
-  src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"),
+  src:
+    local("Open Sans Bold Italic"),
+    local("OpenSans-BoldItalic"),
     url("./github-bothview/open-sans-v17-latin-ext_latin-700italic.woff2")
       format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 html {
@@ -62,7 +77,8 @@ html {
 }
 
 body {
-  font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial,
+  font-family:
+    "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial,
     "Segoe UI Emoji", "SF Pro", sans-serif;
   color: rgb(51, 51, 51);
   line-height: 1.6;
@@ -450,85 +466,71 @@ footer {
 */
 
 /*=======================================================================*/
+/* 右侧面板宽度独立于左侧：拖动左侧分界条只改变 --sidebar-width。
+   想调整右侧大纲面板宽度，改这里 */
 :root {
-  /* 右侧面板独立宽度：拖动左侧边栏分界条不会影响此值，想调右侧宽度改这里 */
   --outline-panel-width: 270px;
 }
 
-/*-----------------------------------------------------------------------*/
-/* 层级调整：content 置于 header 之上（替代旧变体 header z-index:-1 的做法，
-   参考 XiLaiTL/typora-theme-bothview-tabbar 维护版） */
-#top-titlebar { z-index: 2; }
-content { z-index: 901; }
-.show-footer footer.ty-footer { z-index: 902; }
-.megamenu-opened .megamenu-content { z-index: 903; }
-.megamenu-opened header { z-index: 904; }
+header {
+  z-index: -1;
+}
 
-/* 侧边栏（面板）在钉住时占满整窗：左栏放文件，右栏放大纲 */
-.typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) #typora-sidebar {
+.pin-outline header:hover ~ footer {
+  z-index: -2;
+}
+
+.typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on)
+  #typora-sidebar {
   width: 100%;
 }
 
-/* 关键：1.14 新 UI 的 #sidebar-content 是 flex 且未设 flex-direction（默认 row），
-   大纲/文件树/搜索面板会横向排队互相挤压。钉住双栏时改为普通块流纵向堆叠，
-   并让右侧面板用四边显式定位，位置不再依赖 static-position 推断 */
-.typora-node.pin-outline #sidebar-content {
-  display: block;
+.info-panel-tab-wrapper {
+  width: var(--sidebar-width);
 }
 
-/* 左侧信息区（tabs/搜索/footer）跟随左栏宽度 */
-.info-panel-tab-wrapper { width: var(--sidebar-width); }
-.sidebar-footer { width: var(--sidebar-width); }
-#file-library-search { width: var(--sidebar-width); }
-
-/* footer 与拼写检查面板适配独立右栏宽度 */
-.pin-outline footer.ty-footer {
-  width: calc(100% - var(--sidebar-width) - var(--outline-panel-width));
-}
-.pin-outline #spell-check-panel {
-  margin-right: var(--outline-panel-width);
+.sidebar-footer {
+  width: var(--sidebar-width);
 }
 
-/* content 移到中间：left 跟随左栏，right 用独立右栏宽度。
-   1.14 的 content 默认 width:inherit，必须重置为 auto，否则盖住两侧面板 */
+#file-library-search {
+  width: var(--sidebar-width);
+}
+
 .pin-outline content {
   min-height: 0%;
-  height: auto;
-  width: auto;
-  bottom: 25px;
+  height: calc(100% - 30px);
   left: var(--sidebar-width);
   right: var(--outline-panel-width);
 }
 
-/* 钉住后 tabs 行落位到左栏顶部 */
-.info-panel-tab-wrapper { height: 28px; }
-.ty-tab-wrapper { height: 28px; }
-#info-panel-tab-file,
-#info-panel-tab-outline,
-#info-panel-tab-search { margin-top: 28px; }
-.ty-show-search #info-panel-tab-search-back,
-.ty-show-search #info-panel-tab-search { margin-top: 28px; }
-
-/*-----------------------------------------------------------------------*/
-/* 文件 tab：左文件树 + 右大纲 */
 .pin-outline .active-tab-files #file-library {
   width: var(--sidebar-width);
   min-width: 0%;
+  height: 100%;
+  left: 0;
+  transform: none;
 }
+
+/* 文件树定位修复（早期版本验证过的写法，勿改 display/float 相关属性） */
+.pin-outline .active-tab-files #file-library > div {
+  width: 100%;
+  padding-left: 0;
+  margin-left: -90%;
+}
+
 .pin-outline .active-tab-files #outline-content {
-  position: absolute;
-  top: 28px;      /* 让出顶部 tab 行 */
-  bottom: 30px;   /* 让出底部 footer */
+  position: fixed;
   width: var(--outline-panel-width);
+  min-width: 0%;
   right: 0;
-  left: auto;
+  left: calc(100% - var(--outline-panel-width));
   display: block;
   padding-bottom: 84px;
   overflow-y: auto;
+  max-height: calc(100% - 84px);
 }
 
-/*-----------------------------------------------------------------------*/
-/* 大纲 tab：左大纲 + 右侧以文件面板作纯背景（原版设计） */
 .pin-outline .active-tab-outline #outline-content {
   background-color: var(--side-bar-bg-color);
   position: relative;
@@ -536,45 +538,21 @@ content { z-index: 901; }
   min-width: 0%;
   left: 0;
   display: block;
+  overflow-y: auto;
+  max-height: calc(100% - 84px);
 }
+
 .pin-outline .active-tab-outline #file-library {
   background-color: var(--bg-color);
-  position: absolute;
+  position: fixed;
   top: 0;
   width: var(--outline-panel-width);
   left: calc(100% - var(--outline-panel-width));
   display: block !important;
+  height: 100%;
 }
+
 .pin-outline .active-tab-outline #file-library div {
-  display: none; /* 原版设计：大纲 tab 下右侧仅为背景色块 */
+  display: none;
 }
 /*=======================================================================*/
-
-/*=======================================================================*/
-
-/*=======================================================================
-  PERF：大文件夹优化
-=======================================================================*/
-
-/* 列表视图的节点是普通块布局，可安全启用视口外跳过渲染（WKWebView/Safari 18+）。
-   注意：树视图节点（.file-library-node）不能加 —— WebKit 上 containment 会让节点
-   脱离 display:table 的匿名表格修复，行内未清除的 float 图标随即逐行级联，
-   整棵树呈"楼梯"状漂移出面板（Chrome 无此问题，故 harness 断言测不出来） */
-#file-library-list .file-list-item {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 60px;
-}
-
-/* 注意：不要把 #file-library-tree 改成 display:block —— 文件树缩进依赖
-   display:table 的匿名表格嵌套 + 行内 float 图标，改 block 会让未清除的
-   浮动逐行级联，整棵树呈"楼梯"状漂移出面板 */
-
-/* 双栏模式下文件面板保持横向滚动可用，避免悬停时 overflow 在 auto/hidden 间
-   切换（core 规则）导致全树重排 */
-.typora-node.pin-outline #typora-sidebar:hover #file-library,
-.typora-node.pin-outline #file-library {
-  overflow-x: auto;
-  padding-bottom: 0;
-}
-/*=======================================================================*/
-
