@@ -531,10 +531,15 @@ header {
   max-height: calc(100% - 84px);
 }
 
-.pin-outline .active-tab-outline #outline-content {
+/* 大纲 tab：大纲在左栏（fixed 显式落位到 left:0，原版 relative+left:0 的静态位
+   实际是 x=侧栏宽，整块垫在不透明编辑器下面不可见）；宽度跟随左栏分界条。
+   打开文件搜索时让位给搜索面板（回到 core 默认隐藏） */
+.pin-outline
+  .active-tab-outline:not(.ty-on-search):not(.ty-show-search)
+  #outline-content {
   background-color: var(--side-bar-bg-color);
-  position: relative;
-  width: var(--outline-panel-width);
+  position: fixed;
+  width: var(--sidebar-width);
   min-width: 0%;
   left: 0;
   display: block;
@@ -547,6 +552,7 @@ header {
   position: fixed;
   top: 0;
   width: var(--outline-panel-width);
+  min-width: 0%; /* core 的 .sidebar-content-content min-width:100% 会把背景块撑到整窗宽 */
   left: calc(100% - var(--outline-panel-width));
   display: block !important;
   height: 100%;
