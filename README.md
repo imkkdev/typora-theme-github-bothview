@@ -2,6 +2,8 @@
 
 GitHub 风格的 Typora 主题，支持 **BothView**：侧边栏图钉固定后，文件树与大纲左右同屏显示，编辑器自动居中。
 
+**BothView 的现代化延续版**：在 XiLaiTL 原版 BothView 补丁（原仓库已下线）与早期文件树修复的基础上，适配新版 Typora 1.14.x / macOS（WKWebView 内核），并修复原版遗留的大纲 tab 显示 bug、左右面板宽度联动等问题，持续维护。
+
 适配 **Typora 1.14.x / macOS**（WKWebView 版）。
 
 ## 特性
