@@ -10,6 +10,7 @@ GitHub 风格的 Typora 主题，支持 **BothView**：侧边栏图钉固定后�
 - BothView 双栏：固定侧边栏后，「文件」和「大纲」两个 tab 下都是双栏布局
   - 文件 tab：左文件树 + 右大纲
   - 大纲 tab：左大纲 + 右文件树
+- **左右面板宽度独立**：左侧拖动分界条只改变文件树宽度；右侧面板宽度由 CSS 变量 `--outline-panel-width` 控制（默认 270px，在 CSS 顶部 `:root` 中修改）
 - macOS 优化：SF Pro 字体栈、系统强调色光标
 - 字体（Open Sans woff2）随主题自带，不依赖官方 github 主题目录
 - 与源代码模式兼容（`typora-sourceview-on` 时自动禁用双栏）
@@ -34,6 +35,8 @@ GitHub 风格的 Typora 主题，支持 **BothView**：侧边栏图钉固定后�
 | 编辑器盖住两侧面板 | Typora 1.14 的 `content` 默认 `width: inherit`，`left/right` 约束失效 | 补充 `width: auto` 并显式 `bottom: 25px` |
 | 大纲模式下右侧文件树被清空 | `#file-library div { display: none }` 把树全部隐藏，与 `display: block !important` 的本意矛盾 | 移除该规则 |
 | 普通模式 header 异常 | `header { z-index: -1 }` 全局生效 | 限定为 `.pin-outline header` |
+| 左右面板宽度联动 | 双栏共用 `--sidebar-width`，拖左侧分界条右侧大纲跟着变 | 右侧改用独立变量 `--outline-panel-width`（默认 270px） |
+| 文件树"楼梯状"漂移出面板 | 文件树缩进依赖 `display:table` 嵌套 + 行内 float 图标；将树容器改为 block 后未清除的浮动逐行级联 | 保持 core 的 table 模式（CSS 内有注释警告，勿改 block） |
 
 ## 性能优化（大文件夹 / 卡顿）
 

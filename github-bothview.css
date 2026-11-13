@@ -450,6 +450,11 @@ footer {
 */
 
 /*=======================================================================*/
+:root {
+  /* 右侧面板独立宽度：拖动左侧边栏分界条不会影响此值，想调右侧宽度改这里 */
+  --outline-panel-width: 270px;
+}
+
 .pin-outline header {
   z-index: -1;
 }
@@ -480,7 +485,7 @@ footer {
   width: auto; /* Typora 1.14 content 默认 width:inherit，不重置会盖住两侧面板 */
   bottom: 25px;
   left: var(--sidebar-width);
-  right: var(--sidebar-width);
+  right: var(--outline-panel-width);
 }
 
 .pin-outline .active-tab-files #file-library {
@@ -499,10 +504,10 @@ footer {
 
 .pin-outline .active-tab-files #outline-content {
   position: absolute; /* 不用 fixed：core 部分状态给侧边栏加 contain:strict，fixed 包含块会漂移 */
-  width: var(--sidebar-width);
+  width: var(--outline-panel-width);
   min-width: 0%;
   right: 0;
-  left: calc(100% - var(--sidebar-width));
+  left: calc(100% - var(--outline-panel-width));
   display: block;
   padding-bottom: 84px;
   overflow-y: auto;
@@ -524,8 +529,8 @@ footer {
   background-color: var(--bg-color);
   position: absolute; /* 同上，避免 contain:strict 下 fixed 包含块漂移 */
   top: 0;
-  width: var(--sidebar-width);
-  left: calc(100% - var(--sidebar-width));
+  width: var(--outline-panel-width);
+  left: calc(100% - var(--outline-panel-width));
   display: block !important;
   height: 100%;
 }
@@ -535,7 +540,8 @@ footer {
   PERF：大文件夹优化
 =======================================================================*/
 
-/* 视口外的文件节点跳过布局与绘制（WKWebView/Safari 18+，旧版本自动忽略此属性） */
+/* 视口外的文件节点跳过布局与绘制（WKWebView/Safari 18+；table 模式下会被引擎
+   忽略，无害保留） */
 .file-library-node,
 #file-library-list .file-list-item {
   content-visibility: auto;
@@ -546,11 +552,9 @@ footer {
   contain-intrinsic-size: auto 60px;
 }
 
-/* 双栏模式下文件树改用 block 布局：core 的 display:table 自动布局在数千节点时
-   开销极大，且宽度变化（如悬停切换 overflow）会触发整树重排 */
-.typora-node.pin-outline #file-library-tree {
-  display: block;
-}
+/* 注意：不要把 #file-library-tree 改成 display:block —— 文件树缩进依赖
+   display:table 的匿名表格嵌套 + 行内 float 图标，改 block 会让未清除的
+   浮动逐行级联，整棵树呈"楼梯"状漂移出面板 */
 
 /* 双栏模式下文件面板保持横向滚动可用，避免悬停时 overflow 在 auto/hidden 间
    切换（core 规则）导致全树重排 */
