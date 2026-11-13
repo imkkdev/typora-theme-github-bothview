@@ -522,13 +522,18 @@ header {
 .pin-outline .active-tab-files #outline-content {
   position: fixed;
   width: var(--outline-panel-width);
-  min-width: 0%;
   right: 0;
-  left: calc(100% - var(--outline-panel-width));
+  left: auto; /* 右缘锚定：默认几何不变，拖宽时面板向左生长（原 left calc 会让宽度向窗外长） */
   display: block;
   padding-bottom: 84px;
   overflow-y: auto;
   max-height: calc(100% - 84px);
+  /* 拖拽调宽：面板右下角有原生拖拽手柄。宽度在重启后回到默认值（内核不持久化），
+     想固定宽度改 :root 里的 --outline-panel-width */
+  resize: horizontal;
+  min-width: 180px;
+  max-width: 60vw;
+  z-index: 905; /* 拖宽后叠在编辑器留白上方，保持条目可点击 */
 }
 
 /* 大纲 tab：大纲在左栏（fixed 显式落位到 left:0，原版 relative+left:0 的静态位
